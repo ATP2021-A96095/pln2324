@@ -40,7 +40,7 @@ Já para os exercícios 2 e 3, foi utilizada a função len, uma vez que o resul
 
 <p align="justify">Na imagem abaixo, encontra-se presente um excerto relativo ao resultado final obtido após execução do código.</p>
 <p align="center">
-  <img width="350" height="210" src="../../../../Desktop/Uni/4º Ano/2º semestre/P.Linguagem/screenshot.png">
+  <img width="350" height="210" src="screenshot.png">
 </p>
 
 
