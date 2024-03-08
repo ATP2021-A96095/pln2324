@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Fazer com que o texto fique centrado e sobreposto na imagem do cabeçalho */
+        .centered {
+            color: white;
+            font-size: 250%;
+            font-family: Lucida Handwriting;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Fazer com que o texto fique centrado e sobreposto na imagem de uma das secções */
+        .centered_colorido {
+            font-size: 150%;
+            font-family: Lucida Handwriting;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        /* Definição de uma espécie de menu horizontal abaixo do cabeçalho */
+        .container-below {
+            background-color: lightblue;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Definição de cada opção do menu horizontal */
+        .item {
+            display: inline-flex;
+            width: 150px;
+            height: 50px;
+            margin-right: 10px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-family: Georgia, serif;
+        }
+
+        /* Definição do estilo de todos os elementos âncora contidos numa class item */
+        .item a {
+            color: inherit;
+            /* O texto herda a cor do elemento pai (class item) */
+        }
+
+        /* Definir o que acontece a cada opção quando o rato passa sobre elas */
+        .item a:hover {
+            color: inherit;
+            /* O texto herda a cor do elemento pai (class item) */
+        }
+
+        /* Definição da secção Pontilhismo que apresenta texto e um conjunto de pontos */
+        .text-with-dots {
+            font-family: Lucida Handwriting;
+            display: flex;
+            align-items: center;
+            font-size: 150%;
+        }
+
+        /* Definição de uma secção específica para os pontos que seguem o texto */
+        .dots-container {
+            text-align: center;
+            margin-left: 35px;
+        }
+
+        /* Definição do estilo de cada ponto que surge */
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 0 25px;
+            opacity: 0;
+            animation: fadeIn 5s infinite;
+            /* Aplica a animação fadeIn infinitamente */
+        }
+
+        /* Definir secção que contenha, ao mesmo nível, texto e imagem */
+        .text-image {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Definição de secção própria relativamente a Inspirações */
+        /* Basicamente contém o título da secção e imagens ao seu lado direito */
+        .info_insp {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+        }
+
+        /* Definição de uma classe para o texto presente na secção que contém texto + imagem no mesmo nível */
+        .texto {
+            padding: 5px;
+            text-align: justify;
+            font-family: Georgia, serif;
+        }
+
+        /* Definição de uma classe relativa a texto com borda retangular */
+        .texto-borda {
+            border: 2px solid black;
+            padding: 10px;
+            /* Espaçamento interno */
+            width: fit-content;
+            /* A largura da div deve-se ajustar ao conteúdo */
+            margin: 0 auto;
+            /* Centralizar na horizontal */
+            text-align: center;
+            /* Centralizar o texto dentro da div */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Especificar passos intermediários da animação fadeIn */
+        @keyframes fadeIn {
+
+            /* Estado inicial da animação: a opacidade do elemento é 0, totalmente transparente.*/
+            0% {
+                opacity: 0;
+            }
+
+            /* Estado intermediário da animação: a opacidade do elemento é 1, totalmente visível.*/
+            50% {
+                opacity: 1;
+            }
+
+            /* Estado final da animação: a opacidade do elemento é 0, totalmente transparente.*/
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Definição do estilo dos elementos de uma lista */
+        li {
+            list-style-type: "✓";
+            padding-left: 10px;
+            font-family: Georgia, serif;
+            text-align: justify;
+        }
+
+        /* Conhecido como marker selector, permite selecionar o marcador do item da lista */
+        /* Definição da sua cor */
+        ::marker {
+            color: crimson;
+        }
+
+        /* Definição do estilo do texto dentro de um elemento mark */
+        .custom-mark {
+            background-color: #C1E1C1;
+            color: black;
+            /* Cor do texto dentro do elemento mark */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <div class="container">
+        <img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\background.jpg"
+            style="width:100%; height:300px">
+        <div class="centered">Ana's gallery</div>
+    </div>
+
+    <!-- Menu Horizontal -->
+    <div class="container-below">
+        <div class="item"><a href="#section-1"><b>About Me</b></a></div>
+        <div class="item"><a href="#section-2"><b>Técnicas</b></a></div>
+        <div class="item"><a href="#section-3"><b>Inspirações</b></a></div>
+    </div>
+
+    <!-- Secção About Me -->
+    <h1 id="section-1" style="font-family: Georgia, serif;">About Me</h1>
+
+    <div class="text-image">
+        <div>
+            <img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\me.jpg"
+                style="width: 275px; height: 250px;">
+        </div>
+
+        <div class="texto">
+            <p>O meu nome é <i><b>Ana Margarida Sousa</b></i> e gosto de utilizar o meu tempo livre para me dedicar à
+                área das artes: desde o desenho à pintura.</p>
+            <p>
+                Faço isto desde que me lembro, uma vez que me permite desassociar de todo o <i>stress</i> do mundo real.
+                De acordo com <i><b>Johann Goethe:</i></b></p>
+            <p style="color: palevioletred; text-align: center;"><i><b>"Não existe meio mais seguro para fugir do mundo
+                        do que a arte, e não há forma mais segura de se unir a ele do que a arte."</b></i></p>
+            <p>
+                Ao longo deste ficheiro, é possível observar vários desenhos associados a diversas técnicas como o
+                <b>pontilhismo</b> e o <b>realismo</b>, a cores.
+                Espero que gostem.
+            </p>
+        </div>
+    </div>
+
+    <!-- Secção Técnicas -->
+    <h1 id="section-2" style="font-family: Georgia, serif; margin-top: 50px;">Técnicas</h1>
+
+    <!-- Secção Pontilhismo com a animação -->
+    <div class="text-with-dots">
+        <p>Pontilhismo</p>
+        <div class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Introdução à técnica -->
+    <div class="texto">
+        <p>O <b>pontilhismo</b> é uma técnica, proveniente da <b>França</b>, em que pequenos pontos, de cor, ou a preto
+            e branco, permitem, pela sua sobreposição, que a imagem pontilhada se torne contínua ao misturar-se nos
+            olhos do
+            observador, que terá a impressão de um todo.</p>
+    </div>
+
+    <!-- Desenhos do Pontilhismo -->
+    <div class="text-image">
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\lukepont.jpg"
+                style="width: 350px; height: 350px; border: 15px solid #2F4F4F;">
+        </div>
+        <div class="texto">
+            <p>O desenho aqui presente corresponde a um retrato do cantor <i><b>Luke Hemmings,</b></i>
+                vocalista da banda <i>5 Seconds Of Summer</i>, tendo sido inspirado numa das suas músicas,
+                neste caso, da música <i>Easier.</i>
+            </p>
+            <p>Este desenho foi terminado no dia <b>30 de maio de 2019.</b></p>
+        </div>
+    </div>
+
+    </div>
+    <div class="text-image">
+        <div class="texto">
+            <p>O segundo desenho, baseado na técnica de pontilhismo, é, também, relativo a um dos membros
+                da banda <i>5 Seconds Of Summer</i>, neste caso, <i><b>Michael Clifford</b></i>, e a sua
+                esposa <i><b>Crystal Leigh</b></i>.
+            </p>
+            <p>Devido à dimensão do mesmo, todo o processo revelou-se mais exaustivo. É ainda importante
+                notar que ambos os desenhos foram feitos com uma simples lapiseira.
+            </p>
+            <p>Esta ilustração deu-se por terminada no dia <b>5 de setembro de 2019</b>.</p>
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\crystal.jpg"
+                style="width: 500px; height: 350px; border: 15px solid #555;">
+        </div>
+    </div>
+
+    <!-- Técnica Colorido -->
+    <div class="container" style="margin-top: 30px;">
+        <img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\colorido.png"
+            style="width:100%; height:45px">
+        <div class="centered_colorido">Colorido</div>
+    </div>
+
+    <!-- Primeiros dois desenhos coloridos -->
+    <div class="text-image">
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\calummag.jpg"
+                style="width: 350px; height: 450px; border: 15px solid #DDA0DD; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\ashton.jpg"
+                style="width: 350px; height: 450px; border: 15px solid #F4A460; margin-top: 40px;">
+        </div>
+        <div class="texto">
+            <p>Ambos os desenhos correspondem a retratos dos restantes dois membros dos <i>5 Seconds Of Summer:</i>
+                <i><b>Calum Hood</b></i>, na primeira imagem, e <i><b>Ashton Irwin</b></i> na segunda imagem.
+            </p>
+            </br>
+            <p>Nestes desenhos foi explorado o <b>realismo</b>, logo, o número de horas gastos, nos mesmos,
+                foi elevado, uma vez que as camadas devem ser construídas sequencialmente e levemente.
+            </p>
+            </br>
+            <p>O primeiro foi terminado a <b>21 de abril de 2020</b> e o segundo a <b>19 de fevereiro de 2021.</b></p>
+        </div>
+    </div>
+
+    <!-- Últimos dois desenhos coloridos -->
+    <div class="text-image">
+        <div class="texto">
+            <p>Neste caso, o primeiro retrato diz respeito ao cantor <i><b>Harry Styles</b></i>, enquanto
+                que o segundo diz respeito ao ator <i><b>Tom Holland.</b></i>
+            </p>
+            </br>
+            <p>Aqui, estamos perante um caso de <b>realismo</b>, no entanto, o primeiro retrato é mais abstrato,
+                dado que se pretendeu fazer uma referência a uma canção em particular, neste caso, da canção
+                <i>Sunflower.</i>
+            </p>
+            </br>
+            <p>O primeiro foi terminado a <b>2 de fevereiro de 2020</b> e o segundo a <b>10 de agosto de 2020.</b></p>
+
+        </div>
+
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\harrysunf.jpg"
+                style="width: 350px; height: 450px; border: 15px solid #008B8B; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\tom.jpg"
+                style="width: 350px; height: 450px; border: 15px solid #FFE4E1; margin-top: 40px;">
+        </div>
+    </div>
+
+    <!-- Secção Inspirações -->
+    <div class="info_insp">
+        <div class="texto">
+            <h1 id="section-3" style="font-family: Georgia, serif; margin-top: 50px; margin-right: 10px;">Inspirações
+            </h1>
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\flores.jpg"
+                style="width: 350px; height: 50px; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\flores.jpg"
+                style="width: 350px; height: 50px; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\flores.jpg"
+                style="width: 350px; height: 50px; margin-top: 40px; max-width: 100%;">
+        </div>
+    </div>
+
+    <!-- Fotografias de inspiração -->
+    <div class="text-image">
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\fotos\\flower_sketch.jpg"
+                style="width: 350px; height: 450px; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\p.jpeg"
+                style="width: 350px; height: 450px; margin-top: 40px;">
+        </div>
+        <div><img src="C:\\Users\\Ana Sousa\\Documents\\GitHub\\pln2324\\TPC4\\fotos\\insp.jpg"
+                style="width: 350px; height: 450px; margin-top: 40px;">
+        </div>
+    </div>
+
+    <!-- Introdução -->
+    <div class="texto">
+        <p>A <b>inspiração artística</b> é um tipo de energia, ou estímulo, que inspira a criatividade.
+            Muitos artistas contam com essa forma de inspiração para ajudá-los a criar novas obras de arte, pois
+            proporciona muitas ideias novas e originais.</p>
+    </div>
+
+    <div class="texto-borda">
+        <p><b>Mas como é que os artistas encontram inspiração?</b></p>
+    </div>
+
+    </br>
+
+    <!-- Continuação -->
+    <div class="texto">
+        <p> Os artistas inspiram-se numa variedade de fontes, incluindo natureza, pessoas, livros, obras de arte de
+            outros artistas e experiências pessoais.
+            Pessoalmente, a minha inspiração é desplotada, sobretudo, pela <b>música</b> e <b>natureza</b>.</p>
+        <p>Por exemplo, os dois <i>sketches</i> presentes nas imagens acima, são exemplos de algo que desenvolvi
+            enquanto estava num parque, ao ar livre. No entanto, ao longo da sua vida, os artistas passam por momentos
+            em que não sentem qualquer tipo de inspiração, o que se costuma designar por <b><i>art block.</i></b>
+        </p>
+        <p>A seguir encontram-se listadas algumas opções que poderão contornar essa situação:</p>
+    </div>
+
+    <!-- Lista para inspiração -->
+    <ul>
+        <li><mark class="custom-mark">Inspiração proveniente da mídia:</mark> Certos géneros de cinema, literatura ou
+            música exercem um grande impacto no desenvolvimento de estilos artísticos únicos.
+        </li>
+        </br>
+        <li><mark class="custom-mark">Criar um <i>board</i> no <i>Pinterest</i>:</mark> A inspiração artística no
+            <i>Pinterest</i>
+            pode ser encontrada em qualquer lugar. Afinal, é um mecanismo de busca visual,
+            o que torna a plataforma útil para artistas.
+            Além disso, podem ser gerados diversos <i>boards</i>, específicos de um determinado tema,
+            que podem servir como fonte de inspiração.
+        </li>
+        </br>
+        <li><mark class="custom-mark">Recriar projetos antigos:</mark> A observação de projetos artísticos antigos
+            permite identificar mais facilmente os pontos fracos do passado do artista.
+            Com o conhecimento que foi adquirindo, o mesmo é capaz de recriar a obra de arte com mais habilidade,
+            de reimaginar o desenho ou até de pintar de novas maneiras que reflitam as suas habilidades atuais.
+        </li>
+    </ul>
+
+    </br>
+
+    <!-- Conclusão -->
+    <p style="font-family: Lucida Handwriting;"><b>Concluindo...</b></p>
+    <p style="font-family: Georgia, serif;">Neste ficheiro foi feita uma breve apresentação do meu pequeno mundo da
+        arte, tendo sido
+        explorados alguns dos trabalhos que já desenvolvi, categorizados por técnicas.
+        Para além disso, foi incluída uma parte mais final, e teórica, como inspiração para outros
+        artistas.
+    </p>
+    <p style="font-family: Lucida Handwriting; text-align: center;">Espero que tenham gostado</p>
+
+</body>
+
+</html>
