@@ -52,12 +52,12 @@
 
 <p align="justify">Para concretizar o objetivo anterior, a cada elemento âncora estabelecido, foi atribuído um <i><b>id</i></b>, como identificador da secção da página, tal como em: </p>
 
-<p align="center"> <img width="700" height="20" src="screenshots\Captura de ecrã 2024-03-08 182656.png"> </p>
+<p align="center"> <img src="screenshots\Captura de ecrã 2024-03-08 182656.png"> </p>
 
 
 <p align="justify">Com isto, basta apenas definir um <i>hiperlink</i>, usando o <i>id</i> previamente definido, que permite saltar para a parte da página em questão, como em: </p>
 
-<p align="center"> <img width="700" height="15" src="screenshots\Captura de ecrã 2024-03-08 182556.png"> </p>
+<p align="center"> <img src="screenshots\Captura de ecrã 2024-03-08 182556.png"> </p>
 
 #### Introdução à técnica Pontilhismo:
 * <p align="justify"><b><i>text-with-dots</b></i>, <b><i>dots-container</b></i>, <b><i>dot</b></i> e <b><i>@keyframes fadeIn</b></i>: Todas as classes são relativas ao início da secção relativa à técnica pontilhismo, onde a ideia foi introduzir um título, neste caso, "Pontilhismo", seguido por um conjunto de pontos, a ocupar a largura total da página, em animação, isto é, desvanescendo infinitamente.</p>
@@ -83,7 +83,7 @@ um relativo à imagem, de maneira a fazer com que esta se localize num dos lados
 <p align="justify">Por exemplo, a primeira imagem abaixo, quando introduzida no documento, não ocupava a largura total da página, contudo, para contornar essa situação, esta classe foi definida para que, com a colocação, repetida, de 3 imagens, estas pudessem ser interpretadas como uma só.</p>
 
 <p align="center"> 
-<img width="700" height="50" src="fotos\flores.jpg"> 
+<img src="fotos\flores.jpg"> 
 </p>
 
 
@@ -105,29 +105,29 @@ um relativo à imagem, de maneira a fazer com que esta se localize num dos lados
 <p align="justify">Em suma, sinto-me bastante satisfeita com o resultado final, sobretudo com a animação presente e as âncoras definidas. Penso que o tema em si levou a que o ficheiro se tornasse visualmente agradável, uma vez que foram conjugados diversos elementos, como os pontos (já referidos), a barra colorida e as bordas das imagens.</p> 
 <p align="justify">Na secção abaixo, é possível observar alguns <i>screenshots</i> do resultado final:</p>
 
-<p align="center"> <img width="700" height="100" src="screenshots\\Captura de ecrã 2024-03-08 171942.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 171942.png"> </p>
 <p align="center"><sup> Cabeçalho Introdutório </sup> </p>
 
-<p align="center"> <img width="700" height="100" src="screenshots\\Captura de ecrã 2024-03-08 172013.png"> </p>
+<p align="center"> <img  src="screenshots\\Captura de ecrã 2024-03-08 172013.png"> </p>
 <p align="center"><sup> Secção About Me </sup> </p>
 
-<p align="center"> <img width="700" height="75" src="screenshots\\Captura de ecrã 2024-03-08 172122.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172122.png"> </p>
 <p align="center"><sup> Introdução à técnica Pontilhismo </sup> </p>
 
-<p align="center"> <img width="700" height="180" src="screenshots\\Captura de ecrã 2024-03-08 172148.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172148.png"> </p>
 <p align="center"><sup> Desenhos e Descrição da técnica Pontilhismo </sup> </p>
 
-<p align="center"> <img width="700" height="180" src="screenshots\\Captura de ecrã 2024-03-08 172217.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172217.png"> </p>
 <p align="center"><sup> Secção dos desenhos a cores </sup> </p>
 
-<p align="center"> <img width="700" height="160" src="screenshots\\Captura de ecrã 2024-03-08 172240.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172240.png"> </p>
 <p align="center"><sup> Continuação da secção dos desenhos a cores </sup> </p>
 
-<p align="center"> <img width="700" height="190" src="screenshots\\Captura de ecrã 2024-03-08 172308.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172308.png"> </p>
 <p align="center"><sup> Secção das Inspirações </sup> </p>
 
-<p align="center"> <img width="700" height="160" src="screenshots\\Captura de ecrã 2024-03-08 172336.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172336.png"> </p>
 <p align="center"><sup> Continuação da secção das Inspirações </sup> </p>
 
-<p align="center"> <img width="700" height="45" src="screenshots\\Captura de ecrã 2024-03-08 172354.png"> </p>
+<p align="center"> <img src="screenshots\\Captura de ecrã 2024-03-08 172354.png"> </p>
 <p align="center"><sup> Parte final do documento </sup> </p>
