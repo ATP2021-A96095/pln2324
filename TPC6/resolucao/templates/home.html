@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="grid gap-3">
+    <div class="p-1 g-col-2" style="display: flex; align-items: center;">
+        <div style="display: flex; flex-direction: row; align-items: center; width: 100%;">
+            <div>
+                <img src="{{ url_for('static', filename='images/medic.jpg') }}" class="rounded" style="width: 100%;">
+            </div>
+            <div style="padding-left: 10px; width: 60%;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <p class="placeholder-glow">
+                        <span class="placeholder col-12"></span>
+                    </p>
+                    <p class="placeholder-wave" style="margin-bottom: 0;">
+                        <span class="placeholder col-12"></span>
+                    </p>
+
+                    <h1
+                        style="text-align: center; font-family: Gill Sans, sans-serif; font-size: 3.0vw; margin-top: 12.5%; margin-bottom: 12%;">
+                        Bem-vindo ao dicionário de termos médicos</h1>
+
+                    <p class="placeholder-glow">
+                        <span class="placeholder col-12"></span>
+                    </p>
+                    <p class="placeholder-wave" style="margin-bottom: 0;">
+                        <span class="placeholder col-12"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
