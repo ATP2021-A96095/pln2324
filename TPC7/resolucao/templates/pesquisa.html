@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div style="margin-top: 1%; margin-bottom: 2%; position: relative;">
+    <a class="btn btn-outline-dark" href="/conceitos" role="button"
+        style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: .75rem;">
+        <b>Voltar a Conceitos</b></a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Conceito</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Tradução</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if resultados %}
+        {% for conceito in resultados %}
+        <tr>
+            <td>{{ conceito|highlight(termo)|safe }}</td>
+            <td>{{ conceitos[conceito]["desc"]|highlight(termo)|safe }}</td>
+            <td>{{ conceitos[conceito]["en"] }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+<button id="back-to-top-btn"
+        style="display: none; position: fixed; bottom: 60px; right: 3px; padding: 10px 12px; border-radius: 10px;"
+        onclick="scrollToTop()"><i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var button = document.getElementById('back-to-top-btn');
+        if (window.scrollY > 150) { // Quantidade de scroll para ativar o botão 
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    });
+
+    // Função para fazer scroll até ao topo da página
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+{% endblock %}

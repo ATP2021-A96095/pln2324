@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="grid gap-3">
+    <div class="p-1 g-col-2" style="display: flex; align-items: center; justify-content: center;">
+        <img src="{{ url_for('static', filename='images/danger.png') }}" width="10%" height="10%"
+            style="margin-right: 10px;">
+        <div style="padding-left: 10px;">
+            <p style="margin: 0; font-family: Gill Sans, sans-serif; font-size: large;">Conceito "{{termo}}" <b>não
+                    encontrado!</b></p>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-end" style="margin-top: 220px;">
+    <div style="position: relative; right: 10px;">
+        <a class="btn btn-outline-dark" href="/conceitos" role="button"
+            style="--bs-btn-padding-y: .8rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: .75rem;">Voltar a
+            Conceitos</a>
+    </div>
+    <div style="position: relative; left:10px">
+        <a class="btn btn-outline-dark" href="/" role="button"
+            style="--bs-btn-padding-y: .8rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: .75rem;">Voltar à página
+            inicial</a>
+    </div>
+</div>
+
+
+
+{% endblock %}

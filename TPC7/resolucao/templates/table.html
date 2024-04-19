@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div style="margin-top: 1%; margin-bottom: 2%; position: relative;">
+    <a class="btn btn-outline-dark" href="/conceitos" role="button"
+        style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: .75rem;">
+        <b>Voltar a Conceitos</b></a>
+</div>
+
+<table id="myTable" class="display">
+    <thead>
+        <tr>
+            <th>Conceitos</th>
+            <th>Descrição</th>
+            <th>Tradução</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for conceito in conceitos %}
+        <tr>
+            <td>{{conceito}}</td>
+            <td>{{conceitos[conceito]["desc"]}}</td>
+            <td>{{conceitos[conceito]["en"]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
