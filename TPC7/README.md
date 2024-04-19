@@ -102,10 +102,10 @@
 
 <p align="justify">De maneira a tornar o resultado mais visualmente agradável, cada ocorrência do termo, introduzido pelo utilizador, quer esteja presente na designação, ou na descrição de um conceito, é destacada (<i>highlighted</i>), através de uma função definida para o efeito: a função <b><i>highlight</b></i>. Esta função recebe dois argumentos: <i>text</i> e <i>term</i>, substituindo todas as ocorrências de <i>term</i> em <i>text</i> por uma versão destacada de <i>term</i>, ao ser envolvido entre tags <i>mark</i>, graças ao uso da função <b><i>sub</i></b> das RegEX. Neste caso, <i>text</i> pode corresponder à descrição ou à designação do conceito. </p>
 
-<p align="center"> <img src="screenshots\testeadd.png"></p>
+<p align="center"> <img src="screenshots\medicina1.png"></p>
 <p align="center"><sup> <b>Pesquisa melhorada</b> </sup> </p>
 
-<p align="center"> <img src="screenshots\testeadd2.png"></p>
+<p align="center"> <img src="screenshots\medicina2.png"></p>
 <p align="center"><sup> <b>Pesquisa melhorada - continuação</b> </sup> </p>
 
 <p align="justify">Com isto, para que a função possa ser usada diretamente nos modelos <i>html</i>, sem necessidade de duplicação do código, foi necessário introduzir a linha <i>app.template_filter('highlight')(highlight)</i>, de maneira a registar a função como um filtro.</p>
@@ -126,6 +126,9 @@
 
 
 <p align="center"> <img src="screenshots\filtrapesquisa.png"></p>
+<p align="center"><sup> <b>Novo Design</b> </sup> </p>
+
+<p align="center"> <img src="screenshots\conceitos.png"></p>
 <p align="center"><sup> <b>Novo Design</b> </sup> </p>
 
 
