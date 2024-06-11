@@ -21,7 +21,6 @@ texto_traduzido = texto_traduzido.lower()
 termo_traducao = re.findall(r"(.+)\s@\s(.+)", texto_traduzido)
 dic_trad = dict(termo_traducao)
 
-
 #criação do dicionário de dicionários, dic_final
 dic_final={}
 
@@ -37,7 +36,7 @@ for conceito in conceitos_min:
                                    "en": "Sem tradução."
                                 }
 
-        
+   
 #geração das etiquetas
 def etiquetador(m):
     palavra = m[0]
